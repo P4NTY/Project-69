@@ -1,16 +1,9 @@
-iframe {
-    width: 60vw;
-    height: 80vh;
-}
-
 body {
     letter-spacing: 0;
     font-family: "Avenir Next W01","Avenir Next W00","Avenir Next",Avenir,"Helvetica Neue",sans-serif;
     color: #bdbdbd;
     background-color: #000;
 }
-
-
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -18,26 +11,34 @@ body {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     height: 98vh;
-  }
-  
-  .header, .left-bar, .middle-bar, .right-bar, .footer {
+}
+.header, .left-bar, .middle-bar, .right-bar, .footer {
     color: #bdbdbd;
     background: #222;
     border: 1px solid #363636;
-  }
-
-  .header {
+}
+.header {
     grid-area: 1 / 1 / 2 / 4;
-  }
-  .left-bar { 
+}
+.middle-bar {
     grid-area: 2 / 2 / 3 / 3;
-  }
-  .middle-bar {
+    position: relative;
+    overflow:hidden;
+}
+.left-bar {
     grid-area: 2 / 3 / 3 / 4;
-  }
-  .right-bar {
+}
+.right-bar {
     grid-area: 3 / 2 / 4 / 4;
-  }
-  .footer {
+}
+.footer {
     grid-area: 2 / 1 / 4 / 2;
-  }
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+}
