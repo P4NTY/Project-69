@@ -33,6 +33,14 @@ iframe {
 
 .header {
     grid-area: 1 / 1 / 2 / 4;
+    line-height: 1.9;
+    font-size: 40px;
+    padding-left: 40px;
+    
+}
+
+.header-content {
+    vertical-align: bottom;
 }
 
 .left-bar {
@@ -42,6 +50,8 @@ iframe {
 
 .middle-bar {
     grid-area: 2 / 2 / 3 / 3;
+    position: relative;
+    overflow: hidden;
 }
 
 .right-bar {
