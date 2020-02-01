@@ -22,10 +22,11 @@ body {
 }
 .middle-bar {
     grid-area: 2 / 2 / 3 / 3;
+    position: relative;
+    overflow:hidden;
 }
 .left-bar {
     grid-area: 2 / 3 / 3 / 4;
-    position: relative;
 }
 .right-bar {
     grid-area: 3 / 2 / 4 / 4;
