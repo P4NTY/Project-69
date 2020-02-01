@@ -5,7 +5,7 @@ iframe {
 
 body {
     letter-spacing: 0;
-    font-family: "Avenir Next W01","Avenir Next W00","Avenir Next",Avenir,"Helvetica Neue",sans-serif;
+    font-family: "Avenir Next W01", "Avenir Next W00", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
     color: #bdbdbd;
     background-color: #000;
 }
@@ -18,26 +18,102 @@ body {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     height: 98vh;
-  }
-  
-  .header, .left-bar, .middle-bar, .right-bar, .footer {
-    color: #bdbdbd;
+}
+
+.header,
+.left-bar,
+.middle-bar,
+.right-bar,
+.footer {
+    color: #c8bebe;
     background: #222;
     border: 1px solid #363636;
-  }
+}
 
-  .header {
+.header {
     grid-area: 1 / 1 / 2 / 4;
-  }
-  .left-bar { 
-    grid-area: 2 / 2 / 3 / 3;
-  }
-  .middle-bar {
-    grid-area: 2 / 3 / 3 / 4;
-  }
-  .right-bar {
-    grid-area: 3 / 2 / 4 / 4;
-  }
-  .footer {
+}
+
+.left-bar {
     grid-area: 2 / 1 / 4 / 2;
-  }
+    padding: 10px;
+}
+
+.middle-bar {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.right-bar {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.footer {
+    grid-area: 3 / 2 / 4 / 4;
+}
+
+.wrapper-feed {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.feed-element {
+    color: #c8bebe;
+    background: #444;
+    border: 1px solid #464646;
+}
+
+.source {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiP…M5OS45MTUsNi4wNDgsOTMuNzk1LTAuMDcsODYuMjc1LTAuMDd6ICAgIi8+CjwvZz4KPC9zdmc+) no-repeat 0 0;
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+    display: block;
+    float: left;
+    position: relative;
+    top: 3px;
+    left: -4px;
+}
+
+.source-link, .feed-time {
+    font-size: 18px;
+    line-height: 32px;
+    color: #c8bebe;
+    font-family: 'museo sans cyrl 900',Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.feed-time {
+    float: left;
+    vertical-align: top;
+    padding-left: 15px;
+}
+
+.top-right {
+    float: right;
+    vertical-align: top;
+    padding-right: 15px;
+}
+
+.feed-content {
+    padding: 15px;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: 'museo sans cyrl 900',Helvetica,Arial,sans-serif;
+}
+
+.feed-header{
+    height: 35px;
+}
+
+.source-link i {
+    margin-right: 5px;
+}
