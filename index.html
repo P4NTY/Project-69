@@ -45,7 +45,8 @@
             if (index > 10) return;
             index++;
             var wrapperFeed = $('.wrapper-feed');
-            wrapperFeed.append('<div class="feed-element feed-' + index + '"><div class="feed-header"></div><div class="feed-content"></div></div>');
+            wrapperFeed.append('<div class="feed-element feed-' + index +
+                '"><div class="feed-header"></div><div class="feed-content"></div></div>');
             var header = wrapperFeed.find('.feed-' + index + ' .feed-header');
             var content = wrapperFeed.find('.feed-' + index + ' .feed-content');
 
@@ -57,16 +58,18 @@
 
         function getNews() {
             window.NewsModule.get(function (newsArray) {
-                    var wrapperFeed = $('.wrapper-feed');
-                    wrapperFeed.empty();
-                    newsArray.forEach(callback);
+                var wrapperFeed = $('.wrapper-feed');
+                wrapperFeed.empty();
+                newsArray.forEach(callback);
 
-            }, function (error) {console.log(error)});
+            }, function (error) {
+                console.log(error)
+            });
         }
 
         $(document).ready(function () {
             getNews();
-            setTimeout(function(){  
+            setTimeout(function () {
                 getNews();
             }, 300000);
         });
@@ -81,11 +84,15 @@
         <div class="left-bar">
             <div class="wrapper-feed"></div>
         </div>
-        <div class="middle-bar">Three</div>
+        <div class="middle-bar"><iframe id="black"
+                src="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"
+                frameborder="0" height="100%" width="100%" style="position:absolute; top:-60px;"></iframe></div>
         <div class="right-bar">Four</div>
         <div class="footer">Five</div>
     </div>
-
+    <script>
+        //$(document.elementFromPoint(0, 686.600)).click()[0].style.display = 'none';
+    </script>
 </body>
 
 </html>

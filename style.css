@@ -1,16 +1,9 @@
-iframe {
-    width: 60vw;
-    height: 80vh;
-}
-
 body {
     letter-spacing: 0;
     font-family: "Avenir Next W01", "Avenir Next W00", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
     color: #bdbdbd;
     background-color: #000;
 }
-
-
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -18,6 +11,14 @@ body {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     height: 98vh;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -60px;
 }
 
 .header,
